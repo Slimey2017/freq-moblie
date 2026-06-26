@@ -6200,7 +6200,7 @@ function escapeHtmlAttr(s) {
 }
 
 async function injectOgTags({ title, description, image, url }) {
-  let html = await fs.promises.readFile(path.join(__dirname, 'index.html'), 'utf8');
+  let html = await fs.promises.readFile(path.join(__dirname, 'moblie_index.html'), 'utf8');
   const t = escapeHtmlAttr(title);
   const d = escapeHtmlAttr(description);
   const i = escapeHtmlAttr(image || DEFAULT_OG_IMAGE);
@@ -6245,7 +6245,7 @@ app.get('/u/:username', async (req, res) => {
   } catch (err) {
     console.error('[og /u/:username]', err);
   }
-  return res.sendFile(path.join(__dirname, 'index.html'));
+  return res.sendFile(path.join(__dirname, 'moblie_index.html'));
 });
 
 app.get('/artist/:slug', async (req, res) => {
@@ -6263,7 +6263,7 @@ app.get('/artist/:slug', async (req, res) => {
   } catch (err) {
     console.error('[og /artist/:slug]', err);
   }
-  return res.sendFile(path.join(__dirname, 'index.html'));
+  return res.sendFile(path.join(__dirname, 'moblie_index.html'));
 });
 
 
@@ -6473,7 +6473,7 @@ app.patch('/api/admin/tracks/:trackId/explicit', requireAdmin, async (req, res) 
 // ─────────────────────────────────────────────────────────────────────────────
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'moblie_index.html'));
 });
 
 // ─── Start ────────────────────────────────────────────────────────────────────
