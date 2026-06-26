@@ -1,0 +1,19 @@
+{
+  "name": "freq-music-player",
+  "version": "1.0.0",
+  "description": "Universal music player for YouTube, YT Music, Spotify, Tidal, and SoundCloud",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": ["music", "player", "youtube", "spotify", "tidal", "soundcloud"],
+  "author": "Slimey2017",
+  "license": "MIT",
+ "dependencies": {
+  "@supabase/supabase-js": "^2.56.0",
+  "cors": "^2.8.5",
+  "express": "^4.18.2",
+  "multer": "^2.0.2"
+}
+}
